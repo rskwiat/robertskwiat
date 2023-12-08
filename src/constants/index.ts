@@ -7,7 +7,7 @@ export const navItems = [
 		id: uuidv4(),
 	},
 	{
-		title: "Project",
+		title: "Projects",
 		href: "/projects",
 		id: uuidv4(),
 		disabled: true,
@@ -26,3 +26,20 @@ export const navItems = [
 	}
 ];
 
+export const SocialMedia = [
+	{
+		title: "linkedin",
+		href: "https://linkedin.com/in/robertskwiat",
+		id: uuidv4(),
+	},
+	{
+		title: "github",
+		href: "https://github.com/rskwiat",
+		id: uuidv4(),
+	},
+	{
+		title: "email",
+		href: "mailto:rob@robertskwiat.com",
+		id: uuidv4(),
+	}
+];

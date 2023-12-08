@@ -16,9 +16,6 @@ const Home = ({ pageData }: HomeProps) => {
 	return (
 		<Layout>
 			<BasicMeta title="Robert Skwiat" description="Website "/>
-				Home
-
-
 				<div dangerouslySetInnerHTML={{ __html: pageData.contentHtml }} />
 		</Layout>
 	);
