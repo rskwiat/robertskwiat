@@ -4,7 +4,15 @@ import Layout from "@/components/ui/Layout";
 
 import { getData } from "@/lib/getData";
 
-const Home = ({ pageData }) => {
+interface HomeProps {
+	pageData: {
+		id: string;
+		title: string;
+		contentHtml: string;
+	}
+};
+
+const Home = ({ pageData }: HomeProps) => {
 	return (
 		<Layout>
 			<BasicMeta title="Robert Skwiat" description="Website "/>
