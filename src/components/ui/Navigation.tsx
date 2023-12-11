@@ -1,13 +1,15 @@
 import { navItems } from "@/constants";
 import Link from "next/link";
 import { usePathname} from "next/navigation";
+import { container } from "./styles";
 
 export const animation = `transition-colors duration-300 ease-in-out`;
 
 const Navigation = () => {
 	const pathname = usePathname();
 	return (
-		<nav className="px-6 py-4 bg-neutral-800 mb-6">
+		<nav className="py-4 bg-neutral-800 mb-6 border-b border-solid border-b-zinc-200">
+			<div className={`${container}`}>
 				{navItems.map((navItem) => {
 						const isActive = pathname === navItem.href ? "text-zinc-50" : "text-zinc-200";
 						return (
@@ -20,6 +22,7 @@ const Navigation = () => {
 							</Link>
 						);
 				})}
+			</div>
 		</nav>
 	);
 }

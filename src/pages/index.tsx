@@ -3,19 +3,12 @@ import BasicMeta from "@/components/BasicMeta";
 import Layout from "@/components/ui/Layout";
 
 import { getData } from "@/lib/getData";
+import { PageProps } from "@/types";
 
-interface HomeProps {
-	pageData: {
-		id: string;
-		title: string;
-		contentHtml: string;
-	}
-};
-
-const Home = ({ pageData }: HomeProps) => {
+const Home = ({ pageData }: PageProps) => {
 	return (
 		<Layout>
-			<BasicMeta title="Robert Skwiat" description="Website "/>
+			<BasicMeta title="Robert Skwiat" description={pageData.description} />
 				<div dangerouslySetInnerHTML={{ __html: pageData.contentHtml }} />
 		</Layout>
 	);
