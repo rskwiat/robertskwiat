@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
 	output: "export",
-	basePath: "/robertskwiat",
-	assetPrefix: "/robertskwiat/"
+  basePath: process.env.NODE_ENV === "production" ? "": undefined,
+	// assetPrefix: "/robertskwiat/"
 }
 
 module.exports = nextConfig
